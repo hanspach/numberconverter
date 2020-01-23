@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			background-color: #c1e4a5;
+		}
+		div {
+			margin:4px;
+			position:left;
+			height:500px;
+			width: 100%;
+			overflow-y:scroll;
+			overflow-x:hidden;
+		}
+
+		article {
+			border: 1px solid;
+			display: flex;
+		}
+		section {
+			border: 1px solid;
+			padding: 5px;
+			display: 1;
+		}
+	</style>
+	<noscript>
+      Sie haben JavaScript deaktiviert.
+    </noscript>
+	<script src="numbers.js"></script>
+</head>
+<body onload="main()">
+<main>
+	<div>
+		<canvas width="800" height="8192">
+			This text is displayed if your browser does not support HTML5 Canvas.
+		</canvas>
+	</div>
+	<article>
+		<section>
+			<fieldset>
+				<legend>Input</legend>
+				<select id="isys">
+					<option value="2">bin</option>
+					<option value="8">oct</option>
+					<option value="10" selected>dec</option>
+					<option value="16">hex</option>
+				</select>
+				<input type="text" id="input" />
+			</fieldset>
+		</section>
+		<section>
+    		<input type="button" id="convert" value="Convert" style="alignment: center"/>
+		</section>
+		<section>
+			<fieldset>
+				<legend>Result</legend>
+				<select id="osys">
+					<option value="2" selected>bin</option>
+					<option value="8">oct</option>
+					<option value="10">dec</option>
+					<option value="16">hex</option>
+				</select>
+				<textarea readonly rows="3" cols="50" id="result" ></textarea>
+			</fieldset>
+		</section>
+	</article>
+</main>
+<footer>
+	<p id="msgbar" style="color: red;"></p>
+</footer>
+</body>
+</html>
